@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import About from "./Components/About";
+import About from "./Components/About";
 import Navbar from "./Components/Navbar";
 import TextForm from "./Components/TextForm";
 import Alert from "./Components/Alert";
@@ -50,6 +50,7 @@ function App() {
             <Route */}
         {/* exact path="/" element= */}
         {/* { */}
+        <About mode={mode} />
         <div className="container shadow-lg rounded my-4 p-4">
           <TextForm
             heading="Change to UPPERCASE/lowercase:"
@@ -60,7 +61,6 @@ function App() {
         {/* } */}
         {/* ></Route> */}
         {/* </Routes> */}
-        {/* <About mode={mode} /> */}
       </div>
       {/* </Router> */}
     </>

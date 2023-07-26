@@ -62,20 +62,23 @@ export default function TextForm(props) {
             }}
           ></textarea>
         </div>
-        <div className="d-flex text-center gap-3">
-          <button className="btn btn-light" onClick={changeUppercase}>
+        <div>
+          <button className="btn btn-light mx-3 my-3" onClick={changeUppercase}>
             Convert to Uppercase
           </button>
-          <button className="btn btn-light" onClick={changeLowercase}>
+          <button className="btn btn-light mx-3 my-3" onClick={changeLowercase}>
             Convert to Lowercase
           </button>
-          <button className="btn btn-light" onClick={clearText}>
+          <button className="btn btn-light mx-3 my-3" onClick={clearText}>
             Clear
           </button>
-          <button className="btn btn-light" onClick={copyText}>
+          <button className="btn btn-light mx-3 my-3" onClick={copyText}>
             Copy
           </button>
-          <button className="btn btn-light" onClick={removeExtraSpaces}>
+          <button
+            className="btn btn-light mx-3 my-3"
+            onClick={removeExtraSpaces}
+          >
             Remove Extra Spaces
           </button>
         </div>
@@ -85,7 +88,12 @@ export default function TextForm(props) {
           Your Text Summary
         </h2>
         <p style={{ color: props.mode === "dark" ? "white" : "black" }}>
-          {text.split(" ").length} Words and {text.length} Characters
+          {
+            text.split(" ").filter((e) => {
+              return e.length !== 0;
+            }).length
+          }{" "}
+          Words and {text.length} Characters
         </p>
       </div>
     </>

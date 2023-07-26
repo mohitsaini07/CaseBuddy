@@ -6,7 +6,7 @@ export default function Navbar(props) {
   return (
     <>
       <nav
-        className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}
+        className={`navbar navbar-expand-lg fixed navbar-${props.mode} bg-${props.mode}
         } shadow-lg`}
       >
         <div className="container-fluid">
