@@ -7,8 +7,11 @@ export default function About(props) {
   };
 
   return (
-    <div className="container shadow-lg rounded ">
-      <h1 className="my-3 text-uppercase fs-4 pt-2" style={myStyle}>
+    <div className="container shadow-lg rounded">
+      <h1
+        className="my-3 text-uppercase fs-4 pt-2"
+        style={{ color: props.mode === "dark" ? "white" : "black" }}
+      >
         About Us
       </h1>
       <div className="accordion" id="accordionExample">

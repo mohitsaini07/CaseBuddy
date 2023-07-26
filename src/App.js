@@ -40,7 +40,7 @@ function App() {
         <Navbar
           title="CaseBuddy"
           aboutText="About"
-          mode={mode}
+          mode={mode} 
           toggleMode={toggleMode}
         />
         <Alert alert={alert} />
